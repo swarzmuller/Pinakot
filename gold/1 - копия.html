@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This stylesheet contains specific styles for displaying the map
+         on this page. Replace it with your own styles as described in the
+         documentation:
+         https://developers.google.com/maps/documentation/javascript/tutorial -->
+   <style type="text/css">
+   	* {
+  font-size: 30px;
+}
+
+input[type=radio] {display: none;}
+
+input[type=radio] + label {
+    background: blue; 
+}
+
+input[type=radio] + label:before {
+    content: "\26AB";
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #000;
+    font-size: 20px;    
+    line-height: 20px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;    
+    transition: font-size ease .3s;
+    background: blue; 
+}
+
+input[type=radio]:checked + label {
+    width: 200px;
+    height: 200px;
+    background: red;
+    transition: font-size ease .3s;   
+}
+
+input[type=radio]:checked + label div.vetak {
+    width: 200px;
+    height: 200px;
+    background: red;
+    transition: font-size ease .3s;   
+}
+
+input[type=radio]:checked + label:before {
+    font-size: 20px;
+    background: blue;    
+}
+
+   </style>      
+  <body>
+  	<div>
+	<div>
+	  <input type="radio" id="radio" name="radio"  />
+	  <label for="radio">
+	  	<div class="vetak"></div>
+	  </label>
+	</div>
+	<div>
+	  <input type="radio" id="radio1" name="radio" checked/>
+	  <label for="radio1">Radio 1</label>
+	</div>
+	<div>
+	  <input type="radio" id="radio2" name="radio" />
+	  <label for="radio2">Radio 2</label>
+	</div>
+	
+  </body>
+</html>
